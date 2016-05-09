@@ -1,0 +1,12 @@
+version: '2'
+services:
+ test_A: 
+     image: "registry.aliyuncs.com/rhinocxn/rhinocxn:1.0"
+     ports: 
+         - "8080:8080"
+ test_B: 
+     image: "registry.aliyuncs.com/rhinocxn/rhinocxn:1.0"
+     depends_on: 
+         - test_A
+     ports: 
+         - "8009:8080"
